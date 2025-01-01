@@ -20,6 +20,7 @@
             background-color: #007BFF;
             color: #fff;
             padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         header nav {
             display: flex;
@@ -29,6 +30,10 @@
             color: #fff;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+        header a:hover {
+            color: #ddd;
         }
         .hero {
             background: url('path/to/your/background-image.jpg') no-repeat center center/cover;
@@ -50,22 +55,55 @@
         .hero-content {
             position: relative;
             z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
         }
         .hero h1 {
             font-size: 3rem;
             margin: 0;
+            animation: fadeInDown 1s ease-in-out;
         }
         .hero p {
             font-size: 1.5rem;
             margin: 0.5rem 0;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         .section {
             padding: 2rem 1rem;
             text-align: center;
         }
         .section h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            position: relative;
+        }
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #007BFF;
+            margin: 0.5rem auto 1rem auto;
         }
         .section p {
             font-size: 1.25rem;
@@ -75,26 +113,32 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 2rem;
         }
         .feature, .benefit, .feedback {
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
             margin: 1rem;
-            padding: 1rem;
-            width: 250px;
+            padding: 2rem;
+            width: 280px;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .feature:hover, .benefit:hover, .feedback:hover {
+            transform: translateY(-10px);
         }
         .feature i, .benefit i, .feedback i {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #007BFF;
             margin-bottom: 0.5rem;
         }
         .divider {
-            height: 2px;
+            height: 3px;
             background-color: #007BFF;
             margin: 2rem 0;
+            border-radius: 50px;
         }
         footer {
             background-color: #333;
@@ -111,21 +155,21 @@
         footer a {
             color: #fff;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #ddd;
         }
         footer .social-media {
             margin-top: 1rem;
         }
         footer .social-media a {
             margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s;
         }
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: #007BFF;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1rem;
+        footer .social-media a:hover {
+            color: #007BFF;
         }
         .contact-form {
             max-width: 600px;
@@ -154,6 +198,7 @@
             border-radius: 4px;
             font-size: 1rem;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
         .contact-form button:hover {
             background-color: #0056b3;
