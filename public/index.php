@@ -14,10 +14,21 @@
             color: #333;
         }
         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: #007BFF;
             color: #fff;
-            padding: 1rem;
-            text-align: center;
+            padding: 1rem 2rem;
+        }
+        header nav {
+            display: flex;
+            gap: 1rem;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
         }
         .hero {
             background: url('path/to/your/background-image.jpg') no-repeat center center/cover;
@@ -95,22 +106,38 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 1rem 0;
+            padding: 2rem 1rem;
         }
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: #007BFF;
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+        footer a {
             color: #fff;
             text-decoration: none;
-            border-radius: 5px;
+        }
+        footer .social-media {
             margin-top: 1rem;
+        }
+        footer .social-media a {
+            margin: 0 0.5rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1><i class="fas fa-table-tennis"></i> Tischtennis-Turniermanager</h1>
+        <div>
+            <h1><i class="fas fa-table-tennis"></i> Tischtennis-Turniermanager</h1>
+        </div>
+        <nav>
+            <a href="#about">About Page</a>
+            <a href="#tournaments">Turniere</a>
+        </nav>
+        <div>
+            <a href="login.php">Login</a>
+        </div>
     </header>
     <div class="hero">
         <div class="hero-content">
@@ -118,7 +145,7 @@
             <p>Plane, verwalte und verfolge Tischtennis-Turniere in Echtzeit. Perfekt für Vereine und Turnierleiter.</p>
         </div>
     </div>
-    <section class="section">
+    <section class="section" id="about">
         <h2>Funktionen</h2>
         <div class="features">
             <div class="feature">
@@ -143,7 +170,7 @@
             </div>
         </div>
     </section>
-    <section class="testimonials section">
+    <section class="testimonials section" id="tournaments">
         <h2>Erfahrungsberichte</h2>
         <div class="testimonial">
             <img src="path/to/profile-placeholder.jpg" alt="Benutzerprofilbild">
@@ -172,6 +199,16 @@
         <a href="register.php" class="cta-button">Jetzt Registrieren</a>
     </section>
     <footer>
+        <div class="footer-links">
+            <a href="#impressum">Impressum</a>
+            <a href="#datenschutz">Datenschutz</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
         <p>© 2025 Tischtennis-Turniermanager. Alle Rechte vorbehalten.</p>
     </footer>
 </body>
