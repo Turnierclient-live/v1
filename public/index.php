@@ -71,12 +71,12 @@
             font-size: 1.25rem;
             margin-bottom: 1rem;
         }
-        .features {
+        .features, .benefits {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-        .feature {
+        .feature, .benefit {
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -86,7 +86,7 @@
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .feature i {
+        .feature i, .benefit i {
             font-size: 2rem;
             color: #007BFF;
             margin-bottom: 0.5rem;
@@ -123,6 +123,15 @@
         }
         footer .social-media a {
             margin: 0 0.5rem;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
         }
     </style>
 </head>
@@ -185,13 +194,73 @@
     </section>
     <section class="section">
         <h2>Vorteile</h2>
-        <p>Erleben Sie die Vorteile unseres Turniermanagers:</p>
-        <ul>
-            <li>Effizienzsteigerung bei der Turnierplanung</li>
-            <li>Verbesserte Kommunikation mit Teilnehmern</li>
-            <li>Transparente und nachvollziehbare Ergebnisse</li>
-            <li>Erhöhte Zufriedenheit bei Spielern und Zuschauern</li>
-        </ul>
+        <div class="benefits">
+            <div class="benefit">
+                <i class="fas fa-clock"></i>
+                <h3>Echtzeit-Planung und -Verwaltung</h3>
+                <p>Der Turniermanager ermöglicht es, Tischtennis-Turniere in Echtzeit zu planen, zu verwalten und zu verfolgen.</p>
+            </div>
+            <div class="benefit">
+                <i class="fas fa-people-arrows"></i>
+                <h3>Perfekt für Vereine und Turnierleiter</h3>
+                <p>Das System ist speziell auf die Bedürfnisse von Vereinen und Turnierleitern zugeschnitten, um Turniere effizient zu organisieren.</p>
+            </div>
+            <div class="benefit">
+                <i class="fas fa-tv"></i>
+                <h3>Live-Ansicht für Fernseher</h3>
+                <p>Es gibt eine Möglichkeit, die Turnierergebnisse in einer Live-Ansicht im Vollbild auf einem Fernseher anzuzeigen, sodass Zuschauer jederzeit informiert sind.</p>
+            </div>
+            <div class="benefit">
+                <i class="fas fa-qrcode"></i>
+                <h3>QR-Code-Integration</h3>
+                <p>Teilnehmer und Zuschauer können einen QR-Code scannen, um Live-Ergebnisse und Informationen über den aktuellen Stand des Turniers zu erhalten.</p>
+            </div>
+            <div class="benefit">
+                <i class="fas fa-user-check"></i>
+                <h3>Benutzerfreundliche Turnieranmeldung</h3>
+                <p>Teilnehmer können sich einfach für Turniere anmelden, entweder durch Eingabe des Namens oder durch Integration von Klick-TT-Daten.</p>
+            </div>
+            <div class="benefit">
+                <i class="fas fa-sort-amount-up"></i>
+                <h3>Automatische Klassenbildung</h3>
+                <p>Das System schlägt automatisch die besten Klassen für die Spieler vor, basierend auf deren TTR- oder U-TTR-Werten.</p>
+            </div>
+            <div class="benefit">
+                <i class="fas fa-trophy"></i>
+                <h3>Verschiedene Turnierarten</h3>
+                <p>Es können verschiedene Spielmodi wie Einzel-KO, Doppel-KO und mehr ausgewählt werden.</p>
+            </div>
+            <div class="benefit">
+                <i class="fas fa-cogs"></i>
+                <h3>Hohe Flexibilität</h3>
+                <p>Das Turnier kann individuell angepasst werden, z. B. bei der Anzahl der Gewinnsätze, der Spielweise und der Konfiguration der Klassen und Spielregeln.</p>
+            </div>
+            <div class="benefit">
+                <i class="fas fa-link"></i>
+                <h3>Einladungen per Link</h3>
+                <p>Spieler können per Link eingeladen werden, sich dem Turnier anzuschließen, was die Anmeldung und Zusammenarbeit im Team erleichtert.</p>
+            </div>
+            <div class="benefit">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Live-Ergebnisse und Turnierübersicht</h3>
+                <p>Es gibt eine übersichtliche Darstellung der aktuellen Spiele und Ergebnisse, sowohl für Teilnehmer als auch Zuschauer.</p>
+            </div>
+            <div class="benefit">
+                <i class="fas fa-envelope"></i>
+                <h3>E-Mail-Verifizierung</h3>
+                <p>Beim Registrierungsprozess gibt es eine Passwortbestätigung per E-Mail (SMTP), was zusätzliche Sicherheit und Benutzerverifizierung bietet.</p>
+            </div>
+            <div class="benefit">
+                <i class="fas fa-user-alt"></i>
+                <h3>Persönliche Dashboard-Daten</h3>
+                <p>Im Dashboard können Benutzer ihre vergangenen Turniere einsehen und ihre aktuellen Turniere verfolgen, was für eine bessere Verwaltung sorgt.</p>
+            </div>
+            <div class="benefit">
+                <i class="fas fa-tools"></i>
+                <h3>Vollständige Turnierkonfiguration</h3>
+                <p>Alle Aspekte des Turniers können konfiguriert werden, von der Zeitplanung bis hin zu den Regeln und der Struktur des Turniers.</p>
+            </div>
+        </div>
     </section>
     <section class="section">
         <h2>Kontakt & Anmeldung</h2>
