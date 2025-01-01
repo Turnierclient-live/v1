@@ -53,6 +53,11 @@ $liveTournaments = 5; // Beispielwert für aktive Turniere
             color: #007bff;
             padding: 0.5rem 1rem;
             border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn-login:hover {
+            color: #0056b3;
+            background-color: #e6e6e6;
         }
         .hero-section {
             text-align: center;
@@ -72,6 +77,9 @@ $liveTournaments = 5; // Beispielwert für aktive Turniere
             border-radius: 5px;
             margin-top: 1rem;
         }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
         .features {
             padding: 2rem 1rem;
         }
@@ -89,6 +97,23 @@ $liveTournaments = 5; // Beispielwert für aktive Turniere
             padding: 1rem;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .testimonials {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        .testimonial {
+            margin-bottom: 1.5rem;
+        }
+        .cta {
+            text-align: center;
+            padding: 3rem 1rem;
+            background-color: #f1f3f5;
+        }
+        .cta h3 {
+            font-size: 1.5rem;
         }
         .main-footer {
             background-color: #343a40;
@@ -118,7 +143,7 @@ $liveTournaments = 5; // Beispielwert für aktive Turniere
                 <ul class="nav-links">
                     <li><a href="live-tournaments.php">Live-Turniere</a></li>
                     <li><a href="about.php">Über uns</a></li>
-                    <li><a href="login.php" class="btn-login">Login</a></li>
+                    <li><a href="login.php" class="btn-login" style="background-color: orange;">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -149,6 +174,27 @@ $liveTournaments = 5; // Beispielwert für aktive Turniere
                     <p>Erstelle Turniere, lade Spieler ein und überlasse den Rest unserer Plattform.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h3>Was unsere Nutzer sagen</h3>
+            <div class="testimonial">
+                <p>"Der beste Turniermanager, den wir je genutzt haben!"</p>
+                <p>- TTC Beispiel</p>
+            </div>
+            <div class="testimonial">
+                <p>"Intuitiv und leistungsstark – einfach perfekt für unseren Verein."</p>
+                <p>- TTV Muster</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h3>Bist du bereit, dein nächstes Turnier zu planen?</h3>
+            <a href="register.php" class="btn-primary">Jetzt starten</a>
         </div>
     </section>
 
