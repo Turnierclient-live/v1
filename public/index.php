@@ -1,214 +1,121 @@
-<?php
-// index.php
-
-$pageTitle = "Willkommen beim Tischtennis-Turniermanager!";
-$liveTournaments = 5; // Beispielwert für aktive Turniere
-?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Verwalte und organisiere Tischtennis-Turniere einfach und effizient.">
-    <title><?= htmlspecialchars($pageTitle) ?></title>
+    <title>Tischtennis-Turniermanager</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
-            color: #343a40;
         }
-        .main-header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 1rem 0;
-        }
-        .main-header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        .logo a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        }
-        .btn-login {
-            background-color: #fff;
-            color: #007bff;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .btn-login:hover {
-            color: #0056b3;
-            background-color: #e6e6e6;
-        }
-        .hero-section {
+
+        header {
+            background-color: #004aad;
+            color: white;
             text-align: center;
-            padding: 3rem 1rem;
-            background-color: #e9ecef;
+            padding: 10px 0;
+            font-size: 18px; /* Kleinere Schriftgröße */
         }
-        .hero-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        .btn-primary {
-            display: inline-block;
-            background-color: #007bff;
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 1rem;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-        .features {
-            padding: 2rem 1rem;
-        }
-        .features h3 {
+
+        .hero {
+            background: linear-gradient(rgba(0, 74, 173, 0.8), rgba(0, 74, 173, 0.8)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            color: white;
             text-align: center;
-            margin-bottom: 2rem;
+            padding: 80px 20px;
         }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+
+        .hero h1 {
+            font-size: 36px; /* Größere Schriftgröße für den Titel */
+            margin: 0;
         }
-        .feature {
-            background-color: #fff;
-            padding: 1rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        .hero p {
+            font-size: 20px; /* Größere Schriftgröße für den Text */
+            margin: 10px 0 0;
         }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
         .testimonials {
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            padding: 2rem 1rem;
+            background-color: #f9f9f9;
+            padding: 60px 20px;
         }
-        .testimonial {
-            margin-bottom: 1.5rem;
+
+        .testimonials h3 {
+            margin-bottom: 30px;
         }
-        .cta {
-            text-align: center;
-            padding: 3rem 1rem;
-            background-color: #f1f3f5;
-        }
-        .cta h3 {
-            font-size: 1.5rem;
-        }
-        .main-footer {
-            background-color: #343a40;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        .main-footer nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0.5rem 0 0;
+
+        .testimonials-grid {
             display: flex;
+            gap: 20px;
             justify-content: center;
-            gap: 1rem;
+            flex-wrap: wrap;
         }
-        .main-footer nav a {
-            text-decoration: none;
-            color: #fff;
+
+        .testimonial {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .testimonial-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            margin: 15px 0;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <header class="main-header">
-        <div class="container">
-            <h1 class="logo"><a href="index.php">TurnierManager</a></h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="live-tournaments.php">Live-Turniere</a></li>
-                    <li><a href="about.php">Über uns</a></li>
-                    <li><a href="login.php" class="btn-login" style="background-color: orange;">Login</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header>
+        <p>Tischtennis-Turniermanager</p>
     </header>
-    
-    <main class="hero-section">
-        <div class="container">
-            <h2><?= htmlspecialchars($pageTitle) ?></h2>
-            <p>Plane, verwalte und verfolge Tischtennis-Turniere in Echtzeit. Perfekt für Vereine und Turnierleiter.</p>
-            <a href="register.php" class="btn-primary">Jetzt registrieren</a>
-        </div>
-    </main>
-
-    <section class="features">
-        <div class="container">
-            <h3>Unsere Funktionen</h3>
-            <div class="features-grid">
-                <div class="feature">
-                    <h4>Live-Tracking</h4>
-                    <p>Verfolge die Ergebnisse in Echtzeit, ob auf dem Fernseher oder über QR-Codes.</p>
-                </div>
-                <div class="feature">
-                    <h4>Einfache Verwaltung</h4>
-                    <p>Konfiguriere alles, von Spielklassen bis hin zu Turniermodi, in wenigen Klicks.</p>
-                </div>
-                <div class="feature">
-                    <h4>Dynamische Turniere</h4>
-                    <p>Erstelle Turniere, lade Spieler ein und überlasse den Rest unserer Plattform.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <div class="hero">
+        <h1>Willkommen beim Tischtennis-Turniermanager!</h1>
+        <p>Plane, verwalte und verfolge Tischtennis-Turniere in Echtzeit. Perfekt für Vereine und Turnierleiter.</p>
+    </div>
     <section class="testimonials">
-        <div class="container">
-            <h3>Was unsere Nutzer sagen</h3>
+        <h3>Was unsere Nutzer sagen</h3>
+        <div class="testimonials-grid">
             <div class="testimonial">
-                <p>"Der beste Turniermanager, den wir je genutzt haben!"</p>
-                <p>- TTC Beispiel</p>
+                <img src="https://via.placeholder.com/100" alt="Profilbild 1" class="testimonial-img">
+                <p class="testimonial-quote">„Einfach genial! Der Turniermanager hat unser Vereinsleben revolutioniert.“</p>
+                <p class="testimonial-name">- Lisa Müller, TTC Beispiel</p>
             </div>
             <div class="testimonial">
-                <p>"Intuitiv und leistungsstark – einfach perfekt für unseren Verein."</p>
-                <p>- TTV Muster</p>
+                <img src="https://via.placeholder.com/100" alt="Profilbild 2" class="testimonial-img">
+                <p class="testimonial-quote">„Die Live-Ansichten sind ein Game-Changer! Alle Spieler wissen immer, wann sie dran sind.“</p>
+                <p class="testimonial-name">- Max Mustermann, TTV Muster</p>
+            </div>
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100" alt="Profilbild 3" class="testimonial-img">
+                <p class="testimonial-quote">„Super einfach zu bedienen und extrem hilfreich bei der Turnierplanung.“</p>
+                <p class="testimonial-name">- Sarah Klein, TTC Pro</p>
             </div>
         </div>
     </section>
-
-    <section class="cta">
-        <div class="container">
-            <h3>Bist du bereit, dein nächstes Turnier zu planen?</h3>
-            <a href="register.php" class="btn-primary">Jetzt starten</a>
-        </div>
-    </section>
-
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; <?= date("Y") ?> TurnierManager. Alle Rechte vorbehalten.</p>
-            <nav>
-                <ul>
-                    <li><a href="impressum.php">Impressum</a></li>
-                    <li><a href="datenschutz.php">Datenschutz</a></li>
-                    <li><a href="kontakt.php">Kontakt</a></li>
-                </ul>
-            </nav>
-        </div>
+    <footer>
+        <p>&copy; 2025 Tischtennis-Turniermanager. Alle Rechte vorbehalten.</p>
     </footer>
 </body>
 </html>
