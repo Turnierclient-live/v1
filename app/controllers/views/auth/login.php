@@ -12,6 +12,9 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
             display: flex;
@@ -35,12 +38,21 @@
         header a:hover {
             color: #ddd;
         }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
         .hero {
             background: url('path/to/your/background-image.jpg') no-repeat center center/cover;
             color: #fff;
             text-align: center;
             padding: 5rem 1rem;
             position: relative;
+            width: 100%;
         }
         .hero::before {
             content: '';
@@ -88,35 +100,14 @@
                 transform: translateY(0);
             }
         }
-        .section {
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-        .section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-        }
-        .section h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: #007BFF;
-            margin: 0.5rem auto 1rem auto;
-        }
-        .section p {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-        }
         .login-form {
             max-width: 400px;
-            margin: 0 auto;
-            text-align: left;
+            width: 100%;
             background-color: #fff;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
         }
         .login-form label {
             display: block;
@@ -190,14 +181,14 @@
             <a href="login.php">Login</a>
         </div>
     </header>
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Login</h1>
-            <p>Geben Sie Ihre Anmeldedaten ein, um auf Ihr Konto zuzugreifen.</p>
+    <main>
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Login</h1>
+                <p>Geben Sie Ihre Anmeldedaten ein, um auf Ihr Konto zuzugreifen.</p>
+            </div>
         </div>
-    </div>
-    <section class="section">
-        <div class="login-form">
+        <section class="login-form">
             <form action="authenticate.php" method="post">
                 <label for="username">Benutzername</label>
                 <input type="text" id="username" name="username" required>
@@ -207,8 +198,8 @@
                 
                 <button type="submit">Login</button>
             </form>
-        </div>
-    </section>
+        </section>
+    </main>
     <footer>
         <div class="footer-links">
             <a href="impressum.php">Impressum</a>
