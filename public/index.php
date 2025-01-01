@@ -71,12 +71,12 @@
             font-size: 1.25rem;
             margin-bottom: 1rem;
         }
-        .features, .benefits, .feedbacks, .testimonials {
+        .features, .benefits, .feedbacks {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-        .feature, .benefit, .feedback, .testimonial {
+        .feature, .benefit, .feedback {
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -86,15 +86,9 @@
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .feature i, .benefit i, .feedback i, .testimonial i {
+        .feature i, .benefit i, .feedback i {
             font-size: 2rem;
             color: #007BFF;
-            margin-bottom: 0.5rem;
-        }
-        .testimonial img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
             margin-bottom: 0.5rem;
         }
         .divider {
@@ -300,11 +294,6 @@
         </div>
     </section>
     <div class="divider"></div>
-    <section class="section">
-        <h2>Kontakt & Anmeldung</h2>
-        <p>Melden Sie sich noch heute an und nutzen Sie die Vorteile unseres Tischtennis-Turniermanagers!</p>
-        <a href="register.php" class="cta-button">Jetzt Registrieren</a>
-    </section>
     <footer>
         <div class="footer-links">
             <a href="#impressum">Impressum</a>
