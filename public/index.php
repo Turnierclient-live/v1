@@ -338,7 +338,6 @@
             </form>
         </div>
     </section>
-    <div class="divider"></div>
     <footer>
         <div class="footer-links">
             <a href="#impressum">Impressum</a>
