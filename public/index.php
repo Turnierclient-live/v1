@@ -12,7 +12,7 @@ $liveTournaments = 5; // Beispielwert für aktive Turniere
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Verwalte und organisiere Tischtennis-Turniere einfach und effizient.">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/public/css/styles.css">
     <title><?= htmlspecialchars($pageTitle) ?></title>
 </head>
 <body>
