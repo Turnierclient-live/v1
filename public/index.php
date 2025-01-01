@@ -9,113 +9,125 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
-
         header {
-            background-color: #004aad;
-            color: white;
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
             text-align: center;
-            padding: 10px 0;
-            font-size: 18px; /* Kleinere Schriftgröße */
         }
-
         .hero {
-            background: linear-gradient(rgba(0, 74, 173, 0.8), rgba(0, 74, 173, 0.8)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-            color: white;
+            background: url('path/to/your/background-image.jpg') no-repeat center center/cover;
+            color: #fff;
             text-align: center;
-            padding: 80px 20px;
+            padding: 5rem 1rem;
+            position: relative;
         }
-
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
         .hero h1 {
-            font-size: 36px; /* Größere Schriftgröße für den Titel */
+            font-size: 3rem;
             margin: 0;
         }
-
         .hero p {
-            font-size: 20px; /* Größere Schriftgröße für den Text */
-            margin: 10px 0 0;
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
         }
-
-        section {
-            padding: 40px 20px;
+        .section {
+            padding: 2rem 1rem;
+            background-color: #fff;
             text-align: center;
         }
-
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .section p {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
         .testimonials {
             background-color: #f9f9f9;
-            padding: 60px 20px;
         }
-
-        .testimonials h3 {
-            margin-bottom: 30px;
-        }
-
-        .testimonials-grid {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
         .testimonial {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 300px;
-            text-align: center;
+            margin: 1rem 0;
         }
-
-        .testimonial-img {
-            width: 60px;
-            height: 60px;
+        .testimonial img {
             border-radius: 50%;
-            margin-bottom: 15px;
+            width: 100px;
+            height: 100px;
         }
-
-        .testimonial-quote {
-            font-style: italic;
-            margin: 15px 0;
-        }
-
         footer {
-            background-color: #222;
-            color: white;
-            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
             text-align: center;
+            padding: 1rem 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <p>Tischtennis-Turniermanager</p>
+        <h1>Tischtennis-Turniermanager</h1>
     </header>
     <div class="hero">
-        <h1>Willkommen beim Tischtennis-Turniermanager!</h1>
-        <p>Plane, verwalte und verfolge Tischtennis-Turniere in Echtzeit. Perfekt für Vereine und Turnierleiter.</p>
+        <div class="hero-content">
+            <h1>Willkommen beim Tischtennis-Turniermanager!</h1>
+            <p>Plane, verwalte und verfolge Tischtennis-Turniere in Echtzeit. Perfekt für Vereine und Turnierleiter.</p>
+        </div>
     </div>
-    <section class="testimonials">
-        <h3>Was unsere Nutzer sagen</h3>
-        <div class="testimonials-grid">
-            <div class="testimonial">
-                <img src="https://via.placeholder.com/100" alt="Profilbild 1" class="testimonial-img">
-                <p class="testimonial-quote">„Einfach genial! Der Turniermanager hat unser Vereinsleben revolutioniert.“</p>
-                <p class="testimonial-name">- Lisa Müller, TTC Beispiel</p>
-            </div>
-            <div class="testimonial">
-                <img src="https://via.placeholder.com/100" alt="Profilbild 2" class="testimonial-img">
-                <p class="testimonial-quote">„Die Live-Ansichten sind ein Game-Changer! Alle Spieler wissen immer, wann sie dran sind.“</p>
-                <p class="testimonial-name">- Max Mustermann, TTV Muster</p>
-            </div>
-            <div class="testimonial">
-                <img src="https://via.placeholder.com/100" alt="Profilbild 3" class="testimonial-img">
-                <p class="testimonial-quote">„Super einfach zu bedienen und extrem hilfreich bei der Turnierplanung.“</p>
-                <p class="testimonial-name">- Sarah Klein, TTC Pro</p>
-            </div>
+    <section class="section">
+        <h2>Funktionen</h2>
+        <p>Unser Turniermanager bietet eine Vielzahl an Funktionen, um Ihr Turnier effizient zu planen und zu verwalten.</p>
+        <ul>
+            <li>Echtzeit-Updates und Benachrichtigungen</li>
+            <li>Automatische Spielplanerstellung</li>
+            <li>Statistiken und Analysen</li>
+            <li>Online-Anmeldung und Teilnehmerverwaltung</li>
+        </ul>
+    </section>
+    <section class="testimonials section">
+        <h2>Erfahrungsberichte</h2>
+        <div class="testimonial">
+            <img src="path/to/profile-placeholder.jpg" alt="Benutzerprofilbild">
+            <p>"Der Turniermanager hat unser Vereinsleben revolutioniert!"</p>
+            <p>- Max Mustermann, TTC Beispiel</p>
+        </div>
+        <div class="testimonial">
+            <img src="path/to/profile-placeholder.jpg" alt="Benutzerprofilbild">
+            <p>"Ein unverzichtbares Tool für Turnierleiter."</p>
+            <p>- Anna Musterfrau, TTC Beispiel</p>
         </div>
     </section>
+    <section class="section">
+        <h2>Vorteile</h2>
+        <p>Erleben Sie die Vorteile unseres Turniermanagers:</p>
+        <ul>
+            <li>Effizienzsteigerung bei der Turnierplanung</li>
+            <li>Verbesserte Kommunikation mit Teilnehmern</li>
+            <li>Transparente und nachvollziehbare Ergebnisse</li>
+            <li>Erhöhte Zufriedenheit bei Spielern und Zuschauern</li>
+        </ul>
+    </section>
+    <section class="section">
+        <h2>Kontakt & Anmeldung</h2>
+        <p>Melden Sie sich noch heute an und nutzen Sie die Vorteile unseres Tischtennis-Turniermanagers!</p>
+        <a href="register.php" style="display: inline-block; padding: 1rem 2rem; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 5px;">Jetzt Registrieren</a>
+    </section>
     <footer>
-        <p>&copy; 2025 Tischtennis-Turniermanager. Alle Rechte vorbehalten.</p>
+        <p>© 2025 Tischtennis-Turniermanager. Alle Rechte vorbehalten.</p>
     </footer>
 </body>
 </html>
