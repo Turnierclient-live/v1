@@ -215,7 +215,7 @@
             <a href="#tournaments">Turniere</a>
         </nav>
         <div>
-            <a href="app/controllers/views/auth/login.php">Login</a>
+            <a href="../app/controllers/views/auth/login.php">Login</a>
         </div>
     </header>
     <div class="hero">
