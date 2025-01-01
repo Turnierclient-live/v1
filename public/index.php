@@ -71,12 +71,12 @@
             font-size: 1.25rem;
             margin-bottom: 1rem;
         }
-        .features, .benefits, .feedbacks {
+        .features, .benefits, .feedbacks, .testimonials {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-        .feature, .benefit, .feedback {
+        .feature, .benefit, .feedback, .testimonial {
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -86,21 +86,16 @@
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .feature i, .benefit i, .feedback i {
+        .feature i, .benefit i, .feedback i, .testimonial i {
             font-size: 2rem;
             color: #007BFF;
             margin-bottom: 0.5rem;
-        }
-        .testimonials {
-            background-color: #f9f9f9;
-        }
-        .testimonial {
-            margin: 1rem 0;
         }
         .testimonial img {
             border-radius: 50%;
             width: 100px;
             height: 100px;
+            margin-bottom: 0.5rem;
         }
         .divider {
             height: 2px;
@@ -137,6 +132,37 @@
             text-decoration: none;
             border-radius: 5px;
             margin-top: 1rem;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            width: 100%;
+            padding: 1rem;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -185,24 +211,9 @@
         </div>
     </section>
     <div class="divider"></div>
-    <section class="testimonials section" id="tournaments">
-        <h2>Erfahrungsberichte</h2>
-        <div class="testimonial">
-            <img src="path/to/profile-placeholder.jpg" alt="Benutzerprofilbild">
-            <p>"Der Turniermanager hat unser Vereinsleben revolutioniert!"</p>
-            <p>- Max Mustermann, TTC Beispiel</p>
-        </div>
-        <div class="testimonial">
-            <img src="path/to/profile-placeholder.jpg" alt="Benutzerprofilbild">
-            <p>"Ein unverzichtbares Tool für Turnierleiter."</p>
-            <p>- Anna Musterfrau, TTC Beispiel</p>
-        </div>
-    </section>
-    <div class="divider"></div>
     <section class="section">
         <h2>Vorteile</h2>
         <div class="benefits">
-            <!-- Vorteile-Bereich hier -->
             <div class="benefit">
                 <i class="fas fa-clock"></i>
                 <h3>Echtzeit-Planung und -Verwaltung</h3>
@@ -272,28 +283,20 @@
     </section>
     <div class="divider"></div>
     <section class="section">
-        <h2>Feedback</h2>
-        <div class="feedbacks">
-            <div class="feedback">
-                <i class="fas fa-user"></i>
-                <h3>Markus Schmidt</h3>
-                <p>"Das System hat unsere Turniere revolutioniert. Die Echtzeit-Updates sind fantastisch!"</p>
-            </div>
-            <div class="feedback">
-                <i class="fas fa-user"></i>
-                <h3>Lisa Müller</h3>
-                <p>"Die QR-Code-Integration ist so praktisch. Jeder kann sofort die Ergebnisse sehen."</p>
-            </div>
-            <div class="feedback">
-                <i class="fas fa-user"></i>
-                <h3>Thomas Becker</h3>
-                <p>"Besonders die automatische Klassenbildung spart uns so viel Zeit und Mühe."</p>
-            </div>
-            <div class="feedback">
-                <i class="fas fa-user"></i>
-                <h3>Anna Fischer</h3>
-                <p>"Die Live-Ansicht für Fernseher ist ein Hit bei unseren Zuschauern und Teilnehmern."</p>
-            </div>
+        <h2>Kontakt</h2>
+        <div class="contact-form">
+            <form action="submit_form.php" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Absenden</button>
+            </form>
         </div>
     </section>
     <div class="divider"></div>
