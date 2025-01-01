@@ -71,12 +71,12 @@
             font-size: 1.25rem;
             margin-bottom: 1rem;
         }
-        .features, .benefits {
+        .features, .benefits, .feedbacks {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-        .feature, .benefit {
+        .feature, .benefit, .feedback {
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -86,7 +86,7 @@
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .feature i, .benefit i {
+        .feature i, .benefit i, .feedback i {
             font-size: 2rem;
             color: #007BFF;
             margin-bottom: 0.5rem;
@@ -101,6 +101,11 @@
             border-radius: 50%;
             width: 100px;
             height: 100px;
+        }
+        .divider {
+            height: 2px;
+            background-color: #007BFF;
+            margin: 2rem 0;
         }
         footer {
             background-color: #333;
@@ -179,6 +184,7 @@
             </div>
         </div>
     </section>
+    <div class="divider"></div>
     <section class="testimonials section" id="tournaments">
         <h2>Erfahrungsberichte</h2>
         <div class="testimonial">
@@ -192,9 +198,11 @@
             <p>- Anna Musterfrau, TTC Beispiel</p>
         </div>
     </section>
+    <div class="divider"></div>
     <section class="section">
         <h2>Vorteile</h2>
         <div class="benefits">
+            <!-- Vorteile-Bereich hier -->
             <div class="benefit">
                 <i class="fas fa-clock"></i>
                 <h3>Echtzeit-Planung und -Verwaltung</h3>
@@ -262,6 +270,33 @@
             </div>
         </div>
     </section>
+    <div class="divider"></div>
+    <section class="section">
+        <h2>Feedback</h2>
+        <div class="feedbacks">
+            <div class="feedback">
+                <i class="fas fa-user"></i>
+                <h3>Markus Schmidt</h3>
+                <p>"Das System hat unsere Turniere revolutioniert. Die Echtzeit-Updates sind fantastisch!"</p>
+            </div>
+            <div class="feedback">
+                <i class="fas fa-user"></i>
+                <h3>Lisa Müller</h3>
+                <p>"Die QR-Code-Integration ist so praktisch. Jeder kann sofort die Ergebnisse sehen."</p>
+            </div>
+            <div class="feedback">
+                <i class="fas fa-user"></i>
+                <h3>Thomas Becker</h3>
+                <p>"Besonders die automatische Klassenbildung spart uns so viel Zeit und Mühe."</p>
+            </div>
+            <div class="feedback">
+                <i class="fas fa-user"></i>
+                <h3>Anna Fischer</h3>
+                <p>"Die Live-Ansicht für Fernseher ist ein Hit bei unseren Zuschauern und Teilnehmern."</p>
+            </div>
+        </div>
+    </section>
+    <div class="divider"></div>
     <section class="section">
         <h2>Kontakt & Anmeldung</h2>
         <p>Melden Sie sich noch heute an und nutzen Sie die Vorteile unseres Tischtennis-Turniermanagers!</p>
