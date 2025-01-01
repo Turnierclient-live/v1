@@ -1,10 +1,8 @@
 <?php
 // index.php
 
-// Beispiel für dynamische Inhalte
 $pageTitle = "Willkommen beim Tischtennis-Turniermanager!";
 $liveTournaments = 5; // Beispielwert für aktive Turniere
-
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -12,8 +10,105 @@ $liveTournaments = 5; // Beispielwert für aktive Turniere
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Verwalte und organisiere Tischtennis-Turniere einfach und effizient.">
-    <link rel="stylesheet" href="/public/css/styles.css">
     <title><?= htmlspecialchars($pageTitle) ?></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        .main-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .logo a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        .btn-login {
+            background-color: #fff;
+            color: #007bff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .hero-section {
+            text-align: center;
+            padding: 3rem 1rem;
+            background-color: #e9ecef;
+        }
+        .hero-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .btn-primary {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+        .features {
+            padding: 2rem 1rem;
+        }
+        .features h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .feature {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .main-footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .main-footer nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .main-footer nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <header class="main-header">
