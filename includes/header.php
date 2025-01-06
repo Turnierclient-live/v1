@@ -185,6 +185,17 @@
             max-width: 600px;
             margin: 0 auto;
             text-align: left;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: #007BFF;
+            text-align: center;
         }
 
         .contact-form label {
@@ -196,10 +207,11 @@
         .contact-form input,
         .contact-form textarea {
             width: 100%;
-            padding: 0.5rem;
+            padding: 0.75rem;
             margin-bottom: 1rem;
             border: 1px solid #ddd;
             border-radius: 4px;
+            font-size: 1rem;
         }
 
         .contact-form button {

@@ -64,7 +64,7 @@
             <div class="benefit">
                 <i class="fas fa-sort-amount-up"></i>
                 <h3>Automatische Klassenbildung</h3>
-                <p>Das System schlägt automatisch die besten Klassen für die Spieler vor, basierend auf deren TTR- oder U-TTR-Werten.</p>
+                <p>Das System schlägt automatisch die besten Klassen für die Spieler vor, basierend auf deren TTR- oder Q-TTR-Werten.</p>
             </div>
             <div class="benefit">
                 <i class="fas fa-trophy"></i>
@@ -107,6 +107,7 @@
     <section class="section">
         <h2>Kontakt</h2>
         <div class="contact-form">
+            <h3>Kontaktieren Sie uns</h3>
             <form action="submit_form.php" method="post">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
