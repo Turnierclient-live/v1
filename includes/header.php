@@ -80,7 +80,7 @@
 
         /* Hero-Bereich-Stil */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-bg.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.jpg') no-repeat center center/cover;
             color: #fff;
             text-align: center;
             padding: 5rem 1rem;
@@ -122,6 +122,8 @@
             margin-bottom: 2rem;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            max-width: 800px;
+            margin: 2rem auto;
         }
 
         .section h2 {
@@ -142,42 +144,6 @@
         .section p {
             font-size: 1.25rem;
             margin-bottom: 1rem;
-        }
-
-        .features, .benefits, .feedbacks {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        .feature, .benefit, .feedback {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin: 1rem;
-            padding: 2rem;
-            width: 280px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .feature:hover, .benefit:hover, .feedback:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature i, .benefit i, .feedback i {
-            font-size: 2.5rem;
-            color: #007BFF;
-            margin-bottom: 0.5rem;
-        }
-
-        .divider {
-            height: 3px;
-            background-color: #007BFF;
-            margin: 2rem 0;
-            border-radius: 50px;
         }
 
         /* Kontakt-Formular-Stil */
@@ -267,12 +233,12 @@
 <body>
     <header>
         <div class="logo">
-            <img src="images/logo.png" alt="Logo">
+            <img src="../images/logo.png" alt="Logo">
             <h1>Tischtennis-Turniermanager</h1>
         </div>
         <nav>
-            <a href="index.php#about" class="nav-item"><i class="fas fa-info-circle"></i> About Page</a>
-            <a href="index.php#tournaments" class="nav-item"><i class="fas fa-trophy"></i> Turniere</a>
-            <a href="login.php" class="nav-item"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="../index.php#about" class="nav-item"><i class="fas fa-info-circle"></i> About Page</a>
+            <a href="../index.php#tournaments" class="nav-item"><i class="fas fa-trophy"></i> Turniere</a>
+            <a href="../login.php" class="nav-item"><i class="fas fa-sign-in-alt"></i> Login</a>
         </nav>
     </header>

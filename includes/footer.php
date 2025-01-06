@@ -1,8 +1,8 @@
 <footer>
         <div class="footer-links">
-            <a href="impressum.php">Impressum</a>
-            <a href="datenschutz.php">Datenschutz</a>
-            <a href="kontakt.php">Kontakt</a>
+            <a href="../pages/impressum.php">Impressum</a>
+            <a href="../pages/datenschutz.php">Datenschutz</a>
+            <a href="../pages/kontakt.php">Kontakt</a>
         </div>
         <div class="social-media">
             <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
