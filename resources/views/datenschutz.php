@@ -1,5 +1,3 @@
-<?php include 'includes/header.php'; ?>
-
 <main>
     <section class="section" id="datenschutz">
         <h2>Datenschutzerklärung</h2>
@@ -56,8 +54,6 @@
         </div>
     </section>
 </main>
-
-<?php include 'includes/footer.php'; ?>
 
 <style>
 

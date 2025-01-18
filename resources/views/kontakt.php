@@ -1,5 +1,3 @@
-<?php include '../includes/header.php'; ?>
-
 <main>
     <section class="section">
         <h2>Kontakt</h2>
@@ -20,5 +18,3 @@
         </div>
     </section>
 </main>
-
-<?php include '../includes/footer.php'; ?>

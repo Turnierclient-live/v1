@@ -1,5 +1,3 @@
-<?php include '../includes/header.php'; ?>
-
 <main>
     <section class="section">
         <h2>Impressum</h2>
@@ -36,5 +34,3 @@
         </p>
     </section>
 </main>
-
-<?php include '../includes/footer.php'; ?>
