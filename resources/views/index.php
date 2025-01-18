@@ -1,5 +1,3 @@
-<?php include 'includes/header.php'; ?>
-
 <main>
     <div class="hero">
         <div class="hero-content">
@@ -123,5 +121,3 @@
         </div>
     </section>
 </main>
-
-<?php include 'includes/footer.php'; ?>

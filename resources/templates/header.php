@@ -237,8 +237,8 @@
             <h1>Tischtennis-Turniermanager</h1>
         </div>
         <nav>
-            <a href="../index.php#about" class="nav-item"><i class="fas fa-info-circle"></i> About Page</a>
-            <a href="../index.php#tournaments" class="nav-item"><i class="fas fa-trophy"></i> Turniere</a>
-            <a href="../login.php" class="nav-item"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="<?= $tc->url(); ?>#about" class="nav-item"><i class="fas fa-info-circle"></i> About Page</a>
+            <a href="<?= $tc->url(); ?>#tournaments" class="nav-item"><i class="fas fa-trophy"></i> Turniere</a>
+            <a href="<?= $tc->url(); ?>auth/login" class="nav-item"><i class="fas fa-sign-in-alt"></i> Login</a>
         </nav>
     </header>
